@@ -241,7 +241,7 @@ function encodeToRot13(/* str */) {
  *   isString(new String('test')) => true
  */
 function isString(str) {
-  return !!str;
+  return str ? str.length > 0 : false;
 }
 
 
