@@ -1,3 +1,4 @@
+/* eslint-disable no-cond-assign */
 /* *******************************************************************************************
  *                                                                                           *
  * Plese read the following tutorial before implementing tasks:                              *
@@ -223,8 +224,14 @@ function getRectangleString(/* width, height */) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
+function encodeToRot13(s) {
+  // eslint-disable-next-line no-return-assign
+  // eslint-disable-next-line no-cond-assign
+  // eslint-disable-next-line no-return-assign
+  const result = s.replace(/[a-zA-Z]/g, (c) => String.fromCharCode((c <= 'Z' ? 90 : 122)
+  // eslint-disable-next-line no-param-reassign
+  >= (c = c.charCodeAt(0) + 13) ? c : c - 26));
+  return result;
 }
 
 /**
