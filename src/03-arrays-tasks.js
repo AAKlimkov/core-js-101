@@ -310,8 +310,8 @@ function getPositivesCount(arr) {
  *   [ 'nine','eight','nine','eight'] => [ 'eight','eight','nine','nine']
  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
  */
-function sortDigitNamesByNumericOrder(arr) {
-  return arr.sort();
+function sortDigitNamesByNumericOrder(/* arr */) {
+  throw new Error('Not implemented');
 }
 
 /**
